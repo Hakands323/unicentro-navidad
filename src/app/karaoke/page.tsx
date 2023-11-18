@@ -6,11 +6,13 @@ import TermsAndConditionsModal from "@/components/TermsAndConditionsModal";
 import { useRouter } from "next/navigation";
 
 
-function HomePage() {
+
+function karaokePage() {
   const [newTask, setNewTasks] = useState({
     name: "",
     email: "",
-    telefono: "",
+    phone: "",
+    base: "karaoke",
   });
   const router = useRouter();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -46,7 +48,7 @@ function HomePage() {
         <div >
          
           <form className="max-w-4xl mx-auto mt-8" onSubmit={handleSubmit}>
-            <h1 className="text-3xl font-bold">Feliz Navidad</h1>
+            <h1 className="text-3xl font-bold">Karaoke</h1>
             <p className="text-lg font-bold mt-4">
               Ayúdanos a que Santa te contacte, completa el formulario para que
               Santa te envíe respuestas a tus participaciones.
@@ -71,7 +73,7 @@ function HomePage() {
               <label className="block text-xl font-bold mb-2">Teléfono:</label>
               <div className="border-b-2 border-green-500">
                 <input
-                  name="telefono"
+                  name="phone"
                   className="w-full text-xl w-full text-xl text-gray-600"
                   type="tel"
                   required
@@ -144,4 +146,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default karaokePage;

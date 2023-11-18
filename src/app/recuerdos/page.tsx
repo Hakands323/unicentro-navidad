@@ -6,11 +6,13 @@ import TermsAndConditionsModal from "@/components/TermsAndConditionsModal";
 import { useRouter } from "next/navigation";
 
 
-function HomePage() {
+
+function CartaPage() {
   const [newTask, setNewTasks] = useState({
     name: "",
     email: "",
-    telefono: "",
+    phone: "",
+    base: "Recuerdos",
   });
   const router = useRouter();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -71,7 +73,7 @@ function HomePage() {
               <label className="block text-xl font-bold mb-2">Teléfono:</label>
               <div className="border-b-2 border-green-500">
                 <input
-                  name="telefono"
+                  name="phone"
                   className="w-full text-xl w-full text-xl text-gray-600"
                   type="tel"
                   required
@@ -144,4 +146,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default CartaPage;
